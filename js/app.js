@@ -1,7 +1,7 @@
 var point = {
 	name: "Some Point",
 	
-	shout: function(message, callback){
+	shout: function(message = "Hello, I am " + this.name, callback = message => console.log(message)){
 		callback(message);
 	},
 	greeting: function(){
@@ -10,3 +10,4 @@ var point = {
 }
 
 point.greeting();
+point.shout();
